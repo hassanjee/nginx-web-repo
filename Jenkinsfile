@@ -3,10 +3,10 @@ pipeline {
 
     environment {
         // --- CONFIGURE THESE ---
-        GITHUB_REPO        = ' https:'//github.com/hjaved/resume-builder.git'  // GitHub repo URL
-        GITHUB_BRANCH      = 'master'
+        GITHUB_REPO        = 'https://github.com/hassanjee/nginx-web-repo.git'  // GitHub repo URL
+        GITHUB_BRANCH      = 'main'
         DOCKERHUB_USERNAME = 'hjavedengineer'
-        IMAGE_NAME         = 'resume-builder'
+        IMAGE_NAME         = 'nginx-web-server'
         // -----------------------
 
         IMAGE_TAG          = "${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${BUILD_NUMBER}"
