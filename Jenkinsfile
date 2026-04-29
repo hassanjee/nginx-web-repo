@@ -50,7 +50,7 @@ pipeline {
         stage('Install & Test') {
             steps {
                 echo "📦 Installing Node dependencies..."
-                sh 'npm ci'
+                sh 'npm install'
 
                 echo "🧪 Running tests..."
                 sh 'npm test --if-present'
