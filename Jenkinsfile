@@ -50,7 +50,7 @@ pipeline {
         stage('Install & Test') {
             steps {
                 echo "📦 Installing Node dependencies..."
-                sh 'sudo apt-get update && sudo apt-get install -y nodejs npm'  // Ensure Node.js is installed
+                sh 'apt-get update && apt-get install -y nodejs npm'  // Ensure Node.js is installed
                 sh 'npm install'
 
                 echo "🧪 Running tests..."
