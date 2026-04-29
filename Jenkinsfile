@@ -109,7 +109,7 @@ EOF
         stage('Build Docker Image') {
             steps {
                 echo "🔨 Building Docker image: ${IMAGE_TAG}"
-                sh "docker build -t ${IMAGE_TAG} -t ${IMAGE_LATEST} ."
+                sh "docker build -t ${IMAGE_LATEST} ."
                 echo "✅ Image built successfully."
             }
         }
@@ -122,11 +122,11 @@ EOF
                 echo "🚀 Pushing image to DockerHub..."
                 sh '''
                     echo "$DOCKERHUB_CREDS_PSW" | docker login -u "$DOCKERHUB_CREDS_USR" --password-stdin
-                    docker push ''' + IMAGE_TAG + '''
+                   
                     docker push ''' + IMAGE_LATEST + '''
                     docker logout
                 '''
-                echo "✅ Image pushed: ${IMAGE_TAG}"
+                echo "✅ Image pushed: ${IMAGE_LATEST}"
             }
         }
 
