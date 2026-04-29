@@ -159,8 +159,8 @@ EOF
                 sh '''
                     sleep 5
                     # Adjust port/endpoint if needed
-                    curl -sf http://localhost:3000/health || \
-                    curl -sf http://localhost:3000 || \
+                    curl -sf http://localhost/health || \
+                    curl -sf http://localhost || \
                     echo "⚠️  Health check endpoint not reachable — verify manually."
                 '''
             }
