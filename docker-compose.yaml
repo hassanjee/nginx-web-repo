@@ -33,8 +33,8 @@ services:
       - PORT=3000
       # Add your app env vars below or use .env file
       # - DATABASE_URL=${DATABASE_URL}
-    env_file:
-      - .env.production # optional — create this file for secrets
+    # env_file:
+    #   - .env.production # optional — create this file for secrets
     # depends_on:
     #   db:
     #     condition: service_healthy
