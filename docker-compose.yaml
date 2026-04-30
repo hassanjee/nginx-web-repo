@@ -23,7 +23,7 @@
 
 services:
   app:
-    image: your-dockerhub-username/your-app-name:latest # Updated by Jenkins
+    image: hjavedengineer/nginx-web-server:latest # Updated by Jenkins
     container_name: node_app
     restart: unless-stopped
     ports:
